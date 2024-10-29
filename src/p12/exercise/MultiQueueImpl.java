@@ -13,9 +13,10 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 
     @Override
     public Set<Q> availableQueues() {  
-        Set<Q> set = new HashSet<Q>();
-        set.equals(this.queues.keySet());
-        return set;
+        //Set<Q> set = new HashSet<Q>();
+        //set.equals(this.queues.keySet());
+        //return set;
+        return queues.keySet();
     }
     
     @Override
