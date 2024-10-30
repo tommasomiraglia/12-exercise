@@ -13,9 +13,6 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 
     @Override
     public Set<Q> availableQueues() {  
-        //Set<Q> set = new HashSet<Q>();
-        //set.equals(this.queues.keySet());
-        //return set;
         return queues.keySet();
     }
     
@@ -58,7 +55,7 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
             throw new IllegalArgumentException("Queue is not available");
         }
     }
-
+    // TO FIX
     @Override
     public Map<Q, T> dequeueOneFromAllQueues() {
         Map<Q, T> mapDequeued = new HashMap<>();
