@@ -68,18 +68,13 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
         return mapDequeued;
     }
 
-     /**
-     * @return the set of all enqueued elements
-     */
     @Override
     public Set<T> allEnqueuedElements() {
         Set<T> set = new HashSet<T>();
         for(Q queue: this.queues.keySet()) { 
             Queue<T> currentQueue = this.queues.get(queue);
-
-            // Se la coda non è vuota, aggiunge tutti i suoi elementi al set
             if (currentQueue != null) {
-                set.addAll(currentQueue); // Aggiunge tutti gli elementi di currentQueue a set
+                set.addAll(currentQueue); 
             }
         }
         return set;
